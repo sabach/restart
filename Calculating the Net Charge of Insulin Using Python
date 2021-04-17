@@ -1,0 +1,78 @@
+Calculating the Net Charge of Insulin Using Python Lists and Loops
+Lab Overview
+In the Flow Control module, you wrote conditionals.py, while.py, and lists.py. You learned about if-else statements, while loops, lists, and for loops. Now you will apply what you have learned to the real world application of human insulin.
+
+Here you will use lists, for and while loops, and basic math to calculate the net charge of insulin from pH 0 to pH 14.
+
+In this lab, you will:
+
+Create a dictionary of pKa values to be used in the net charge calculations
+Use the count method to get a count of amino acids
+Use a while loop to calculate the net charge of insulin from pH 0 to pH 14
+Estimated Completion Time
+25 minutes
+
+Exercise 1: Assign Variables, Lists, and Dictionaries
+In this exercise, you will edit labe3.py that has been created for you.
+
+Select work in the file tree on the left and then select lab3.py
+
+Open the lab3.py with your preferred text editor and copy and paste the below code into your new file. (This was the solution from the lab2.py.
+
+# python3.6  
+# coding: utf-8  
+# store the human preproinsulin sequence in a variable called preproinsulin:  
+preproInsulin = "malwmrllpllallalwgpdpaaafvnqhlcgshlvealylvcgergffytpktrreaedlqvgqvelgggpgagslqplalegslqkrgiveqcctsicslyqlenycn"  
+# store the remaining sequence elements of human insulin in variables:  
+lsInsulin = "malwmrllpllallalwgpdpaaa"  
+bInsulin = "fvnqhlcgshlvealylvcgergffytpkt"  
+aInsulin = "giveqcctsicslyqlenycn"  
+cInsulin = "rreaedlqvgqvelgggpgagslqplalegslqkr"  
+insulin = bInsulin + aInsulin
+On the next line, create a new dictionary by typing pKR = {}.
+
+To fill the dictionary with key value pairs, insert the first key of “y” with a value of 10.07 by typing inside the brackets, ‘y’: 10.07 followed by a comma to allow the remaining key/value pairs to be added.
+
+Add the following key value pairs into the dictionary to match the code segment.
+
+pKR = {'y':10.07,'c': 8.18,'k':10.53,'h':6.00,'r':12.48,'d':3.65,'e':4.25}
+Note
+
+Y, C, K, H, R, D, and E are the only amino acids that contribute to the net charge calculation.
+
+Exercise 2: Use count() to Count the Numbers of Each Amino Acid
+In this exercise, you will use the count method and list comprehension to count the number of Y, C, K, H, R, D, and E amino acids, since these are the amino acids that contribute to the net charge.
+
+To identify a count of an item within a list, you can use the count method. Use the count method by typing insulin.count("Y") to see how many amino acids are in insulin are “Y”.
+Next, ensure that your variable being returned by the count method is cast as a float by typing float(insulin.count("Y")).
+Now that you have the basis to identify a single entity, you can use this method to find all entities from a list. This can be done using list comprehension. You can do this by typing seqCount = ({x: float(insulin.count(x)) for x in ['y','c','k','h','r','d','e']}) for the entire line.
+Note
+
+Steps 1 and 2 are predecessors to the step 3.
+
+Exercise 3: Write the Net Charge Formula
+In this exercise, you will use the following variable for a Python-based net charge formula to create a while loop that will print the net charge while the pH variable is equal to or below 14.
+
+netCharge = (
+    +(sum({x: ((seqCount[x]*(10**pKR[x]))/((10**pH)+(10**pKR[x]))) \
+    for x in ['k','h','r']}.values()))
+    -(sum({x: ((seqCount[x]*(10**pH))/((10**pH)+(10**pKR[x]))) \
+    for x in ['y','c','d','e']}.values())))
+Create a variable called pH and initialize it to zero by typing pH = 0 and pressing ENTER.
+
+Create the while loop by typing while (pH <= 14): and pressing ENTER.
+
+Using the netCharge variable above, copy the information into the top of the while loop.
+
+To print the netCharge variable with the pH, use a format string for better readability. Do so by typing print('{0:.2f}'.format(pH), netCharge) and pressing ENTER.
+
+Finally, you need to increment the pH variable by typing pH += 1 and pressing ENTER.
+
+Save and close the file and then type python3.6 lab3.py to run the file and view the results.
+
+Be careful about indents and spacing in Python
+
+Subsets of Python code are organized by indents and spaces, and even one misplaced indent or space can throw an exception or other error in Python. For example, be sure that every item within your while loop is properly indented in order for the code to work.
+
+STOP
+You have successfully completed this lab.

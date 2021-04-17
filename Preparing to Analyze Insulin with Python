@@ -1,0 +1,57 @@
+Preparing to Analyze Insulin with Python
+Lab Overview
+In information technology, Python excels as the programming language of choice for manipulating strings, sequences, and numbers. Python is especially preferred in scientific computing applications such as physics, chemistry, and biology.
+
+In the lab portions of the Python modules, you will be doing simple sequence manipulations and calculations on human insulin, which is a well-known hormone in the human body responsible for regulating sugars.
+
+In this lab, you will:
+
+Retrieve the protein sequence of human insulin from human preproinsulin while signed in under your own student ID (with sudo privileges)
+Estimated Completion Time
+30 minutes
+
+Exercise 1: Retrieve the Protein Sequence of Human Preproinsulin
+The National Center for Biotechnology Information (NCBI) has information on many biological sequences.
+
+Access NCBI at: ncbi.nlm.nih.gov.
+
+Click the drop down next to the search bar and select Protein. Next type “human insulin” in the search bar and click Search.
+
+
+Click the second search result: insulin [Homo sapiens].
+
+Click on work folder on the left file tree and then click on the file preproinsulin_seq.txt
+
+Copy the insulin sequence into preproinsulin_seq.txt:
+
+ORIGIN      
+    1 malwmrllpl lallalwgpd paaafvnqhl cgshlvealy lvcgergffy tpktrreaed
+   61 lqvgqvelgg gpgagslqpl alegslqkrg iveqcctsic slyqlenycn
+//
+Bonus: Programmatically cleaning insulin_seq.txt
+Cleaning source data files is a common task in computer programming. There are several ways you could programmatically clean insulin_seq.txt using bash, Python, or another programming language of choice. Try using regex to programmatically strip the file of “ORIGIN”, its numbers, “//”, spaces, and line breaks or return carriages. You could also verify that the file has 110 characters programmatically.
+
+Exercise 2: Obtain the Protein Sequence of Human Insulin
+Insulin is obtained from preproinsulin through a series of “cut and paste” procedures. Preproinsulin contains a 24aa signal sequence and an 86aa proinsulin molecule. Amino acids 25-54 and amino acids 90-110 are the processed insulin molecule. Use Python, bash, or manual manipulation to retrieve just those amino acids in the sequence that compose insulin.
+
+Manually or programmatically delete “ORIGIN”, “1”, “61”, “//”, and the spaces and return carriages.
+
+Copy your results in the file preproinsulin_seq_clean.txt.
+
+Verify that your file has 110 characters of lowercase letters, which represent the amino acids in the sequence of human preproinsulin.
+
+Save amino acids 1-24 as lsinsulin_seq_clean.txt. Verify that your file has 24 characters.
+
+Save amino acids 25-54 as binsulin_seq_clean.txt. Verify that your file has 30 characters.
+
+Save amino acids 55-89 as cinsulin_seq_clean.txt. Verify that your file has 35 characters.
+
+Save amino acids 90-110 as ainsulin_seq_clean.txt. Verify that your file has 21 characters.
+
+When to automate and when to work manually: A discussion on scope vs. time
+Automating your work versus working manually is a dilemma for computer programmers. Too much automation wastes time on coding, whereas too little restricts the scope of your program. Try to balance your automation with working manually in an effort to create a program with the most scope for the least time spent coding. In this case, it is probably not worth the extra coding time to programmatically clean insulin_seq.txt to insulin_seq_clean.txt, but if you had to download thousands or millions of files and do the same, it would certainly be worth the automation.
+
+Manually preparing these files should give you an appreciation for the automation that Python can provide!
+
+STOP
+You have successfully completed this lab.

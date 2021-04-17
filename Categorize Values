@@ -1,0 +1,49 @@
+Categorize Values
+Lab Overview
+Python allows you to mix types in a list. In this lab, you will create a list with different types and print the values.
+
+In this lab, you will:
+
+Use numeric data types
+Use string data types
+Use the list data type
+Use a for loop
+Use the print function
+Estimated Completion Time
+30 minutes
+
+Exercise 1: Mixed Bag
+A Python list allows you to mix types in a list. This isn’t the case with lists in other languages. Let’s explore this capability.
+
+In the file tree, click on the work folder
+
+Click on the file categorize_values.py that has been created for you.
+
+Define a list with different types as follows:
+
+myMixedBagList = [45, 290578, 1.02, True, "My dog is on the bed.", "45"]
+Use a for loop statement to traverse the list and print out the type of the data:
+
+for item in myMixedBagList:
+  print("{} is of data type {}".format(item,type(item)))
+Save the file.
+
+To run the program, type the following at the terminal:
+
+python3.6 categorize_values.py
+Verify that the script runs correctly and that the output displays as you expect it to.
+
+~ $ python3.6 categorize_values.py                           
+45 is of data type <class 'int'>                             
+290578 is of data type <class 'int'>                         
+1.02 is of data type <class 'float'>                         
+True is of data type <class 'bool'>                          
+My dog is on the bed. is of data type <class 'str'>          
+45 is of data type <class 'str'>                             
+~ $                                                          
+This exercise reinforced the Python programming concepts covered in labs 1 through 6. Although the code is only a few lines, it is very powerful. Take some time to review it and make sure you understand everything that is going on.
+
+Congratulations, you are now familiar with the list data type and Python’s support for mixing data types in a list declaration.
+
+STOP
+You have successfully completed this lab.

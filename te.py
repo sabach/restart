@@ -1,0 +1,5 @@
+print ('a')
+i=ord('a')
+print(i)
+i=chr(ord('a')+1)
+print(i)

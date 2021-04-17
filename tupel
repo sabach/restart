@@ -1,0 +1,4 @@
+myBands=["Slayer" , "Metallica" , "Absu"]
+print(myBands)
+print(type(myBands))
+print(myBands[0])

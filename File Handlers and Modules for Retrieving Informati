@@ -1,0 +1,47 @@
+File Handlers and Modules for Retrieving Information about Insulin
+Lab Overview
+In this lab, you will:
+
+Adapt the results of the last lab to write a function that calculates the net charge of insulin
+Change the net charge function to enable the calculation of the net charge of any protein
+Use built-in functions and write new functions that process the insulin sequence
+Estimated Completion Time
+25 minutes
+
+Exercise 1: Importing ETree to Process the Insulin Sequence from INSD XML Format
+The National Center for Biotechnology Information does not work with JSON, but they do work with a similar yet older file format called XML. Here you will use Python to import an XML handler to extract information about insulin directly from the NCBI primate proteins database.
+
+The insulin sequence file is available as a file in your work directory (INSD.xml). Your task is to parse that information in an effort to learn and analyze insulin.
+
+1. First, you should import Etree to begin your work:
+
+    import xml.etree.ElementTree as ETree
+2. After importing the ETree module, you must write a base program that calls on different functions in order to parse the INSD XML to a format comfortable for humans. In the following code, the work is started for you, including a try/catch system for handling a common error exception. Note the manual error catch for printing errors at the end of this code snippet.
+
+with open(outfile, "a") as f:
+    seqinfilecount = 0
+    context = ETree.iterparse(infile, events=("start", "end"))
+    for event, elem in context:
+        if event == "end" and elem.tag == "INSDSeq":
+            ETObj = elem
+            if ETree.iselement(ETObj):
+                try:
+                    insertdict = selectid(ETObj)
+                except:
+                    raise ValueError("no seq-id")
+                insertdict["divid"] = divid
+                remainingdict = presqlprocessing(insertdict)
+                if ifnotset:
+                    print(ifnotset)
+            seqinfilecount += 1
+            print(seqinfilecount)
+            elem.clear()
+print("{} errors ({}%) in inserting from file {} ({}) seqs analyzed".format(dividfileerrorcounter, 100 * (float(  
+    dividfileerrorcounter) / float(seqinfilecount)), countfiles, seqinfilecount))  
+seqcount = seqcount + seqinfilecount  
+connect.close()              
+print("{} seqs analyzed in 1 file".format(len(insertdict)))
+3. Can you write selectid() or another fruitful function that returns insertdict in order to continue on with parsing?
+
+STOP
+You have successfully completed this lab.

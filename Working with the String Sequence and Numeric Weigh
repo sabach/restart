@@ -1,0 +1,135 @@
+Working with the String Sequence and Numeric Weight of Insulin in Python
+Lab Overview
+In the Python Basics module, you wrote helloworld.py, variables.py, basicmath.py, and funwithstrings.py. You learned about variables, comments, math, concatenations, and exceptions. Now you will apply what you have learned to the real world application of human insulin.
+
+You will store the protein sequence of human preproinsulin in a string variable and the weight of preproinsulin in int and float variables. Next, you will print these variables to console, with comments that explain the code. You will do basic math and string concatenations.
+
+In this lab, you will:
+
+Add comments that explain the intention and flow of your code
+Use print() to print elements of your Python code to console
+Use string manipulations to get the sequence of insulin from preproinsulin
+Do basic math on the molecular weight and sequence of insulin
+Assign string, int, and float variables to numbers representing the weight of insulin
+Explore Python exceptions
+Estimated Completion Time
+30 minutes
+
+Exercise 1: Start a New Python File
+In this exercise, you will start a new Python file in which to write the code in later exercises. A file lab2.py has already been created for you.
+
+1.Select work in the file tree on the left and then select lab2.py to edit the file.
+
+How to start your .py file
+
+You should always start your Python file with comments (i.e., using the pound sign [#]) that gives the Python version (“python3.6”) with a path to the executable, if possible, and the encoding of the file (typically “coding: utf-8”).
+
+Exercise 2: Assign Variables to the Sequence Elements of Human Insulin
+In this exercise, you will create variables and assign them a string value.
+
+Write the following note on the next line:
+
+# store the human preproinsulin sequence in a variable called preproinsulin:**
+Create the first variable in the Python file by typing preproInsulin = as the name of the variable with equal sign.
+
+After the equal sign, type the following:
+
+"malwmrllpllallalwgpdpaaafvnqhlcgshlvealylvcgergffytpktr" \
+"reaedlqvgqvelgggpgagslqplalegslqkrgiveqcctsicslyqlenycn"
+Press ENTER to finalize the first variable on that line.
+
+Maximum length of lines in Python files and other PEP standards
+
+The trailing backslash (\) in step 3 is used to maintain compliance with the PEP 8 style guide, which recommends a maximum of 79 characters per line. Python Enhancement Proposals (PEPs) are best-practice standards for Python. While the file still runs with longer line lengths, sticking to the suggested limit increases simplicity and readability. The backslash (\) allows you to split variables and code into smaller blocks, thereby maintaining the 79-character limit.
+
+Write a note in the file stating:
+
+# store the remaining sequence elements of human insulin in variables:
+Repeat steps 2 and 3 for this chart. Use an equal sign between variable name and string.
+
+Variable Name
+
+String to Save to Variable
+
+lsInsulin
+
+"malwmrllpllallalwgpdpaaa"
+
+bInsulin
+
+"fvnqhlcgshlvealylvcgergffytpkt"
+
+aInsulin
+
+"giveqcctsicslyqlenycn"
+
+cInsulin
+
+"rreaedlqvgqvelgggpgagslqplalegslqkr"
+
+Note
+
+Variable names in Python usually begin with a lowercased first word, and then uppercase for each word thereafter, without underscores or spaces. Be consistent in naming your variables.
+
+Finally, you will merge the results of the smaller insulin groupings into a single variable called insulin. To do this, on a new line type: insulin = bInsulin + aInsulin
+Exercise 3: Use print() to Display Sequences of Human Insulin to Console
+In this exercise, you will use the print() builtin method to display sequence elements of human insulin in the console.
+
+Write a note on the next line:
+
+# Printing "the sequence of human insulin" to console using successive print() commands
+On a new line of the Python file, type print("The sequence of human preproinsulin:") and press ENTER. This print statement prints the direct representation of the string provided with no formatting.
+
+To print a string contained within a variable from your script, type print(preproInsulin) and press ENTER.
+
+On the next line, type the following note:
+
+# printing to console using concatenated strings inside the print function (one-liner):
+To concatenate strings together, use the addition sign in the print statement by typing:
+
+print("The sequence of human insulin, chain a: " + aInsulin)
+Press ENTER.
+
+Note
+
+The builtin print function accepts multiple arguments that can accomplish the same task in step 5. For example:
+
+print("The sequence of human insulin, chain a:", aInsulin)
+
+Save your file and run lab2.py from the console by typing python3.6 lab2.py and pressing ENTER to view the results of the different implementations of the print function.
+Exercise 4: Calculate the Rough Molecular Weight of Human Insulin Using the Given Code
+In this lab, you will calculate the molecular weight of insulin, which you will work with in later labs. The course has not yet covered lists, loops, and so forth, so the code is written for you.
+
+Ensure that your lab2.py file is open in your preferred text editor.
+
+Copy and paste the following code to the end of your lab2.py file and save the file.
+
+# Calculating the molecular weight of insulin  
+# Creating a list of the amino acid (AA) weights  
+aaWeights = {'A': 89.09, 'C': 121.16, 'D': 133.10, 'E': 147.13, 'F': 165.19, 
+'G': 75.07, 'H': 155.16, 'I': 131.17, 'K': 146.19, 'L': 131.17, 'M': 149.21, 
+'N': 132.12, 'P': 115.13, 'Q': 146.15, 'R': 174.20, 'S': 105.09, 'T': 119.12, 
+'V': 117.15, 'W': 204.23, 'Y': 181.19}  
+# Count the number of each amino acids  
+aaCountInsulin = ({x: float(insulin.upper().count(x)) for x in ['A', 'C', 
+'D', 'E', 'F', 'G', 'H', 'I', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 
+'V', 'W', 'Y']})  
+# Multiply the count by the weights  
+molecularWeightInsulin = sum({x: (aaCountInsulin[x]*aaWeights[x]) for x in 
+['A', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 
+'S', 'T', 'V', 'W', 'Y']}.values())  
+print("The rough molecular weight of insulin: " + 
+str(molecularWeightInsulin))
+From your console, type python3.6 lab2.py and press ENTER to execute the Python script.
+
+Notice the resulting output. You will use elements of this code to work with loops and functions in modules 3 and 4, so look at how the code is written and try to follow the expected output.
+
+Note
+
+The actual molecular weight of human insulin is 5807.63, but the program delivers 6696.42 because it ignores certain bonds and post-translational processing. Calculate the percent error: percent error = (| measured – accepted | / accepted)*100%
+
+When using string concatenation with floating point calculations, the print function returns an error. This is handled by a method called casting, or telling Python to use a certain data type. The following str() function is an example. Type or copy the example into your script.
+
+print("Percent error: " + str(((molecularWeightInsulin - molecularWeightInsulinActual)/molecularWeightInsulinActual)*100))
+STOP
+You have successfully completed this lab.

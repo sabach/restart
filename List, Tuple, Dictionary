@@ -1,0 +1,186 @@
+List, Tuple, Dictionary
+Lab Overview
+In Python, string and numeric data types are often used in groups called collections. Three such collections supported by Python are the list, the tuple, and the dictionary.
+
+In this lab, you will:
+
+Use the list data type
+Use the tuple data type
+Use the dictionary data type
+Estimated Completion Time
+45 minutes
+
+Exercise 1: The List Data Type
+Define a List
+You will edit a Python script to hold a collection of fruit names, or a list.
+
+Click on work folder in the file list:
+
+Click on the file list_tuple_dictionary.py which has been created for you:
+
+Type the following:
+
+myFruitList= ["apple", "banana", "cherry"]
+print(myFruitList)
+print(type(myFruitList))
+Save the file.
+
+To run the program, type the following at the terminal:
+
+python3.6 list_tuple_dictionary.py
+Verify that the script runs correctly and that the output displays as you expect it to.
+
+Access a List by Position
+The contents of a list can also be accessed by position. In this activity, you will print out each item in our list by their position:
+
+In programming languages, the list position starts at zero. The brackets tell Python you are about to tell it the position in the list you want. To access the "apple" string, type the following:
+
+print(myFruitList[0])
+To access the "banana" string, type the following:
+
+print(myFruitList[1])
+To access the "cherry" string, type the following:
+
+print(myFruitList[2])
+Save the file.
+
+To run the program, type the following at the terminal:
+
+python3.6 list_tuple_dictionary.py
+Verify that the script runs correctly and that the output displays as you expect it to.
+
+Change the Values in a List
+The values of a list can be changed. In this activity, you will change "cherry" to "orange."
+
+In Python, list position starts at zero, so you have to use the number 2 to access the third position. Type the following:
+
+myFruitList[2] = "orange"
+Print the updated list:
+
+print(myFruitList)
+Save the file.
+
+To run the program, type the following at the terminal:
+
+python3.6 list_tuple_dictionary.py
+Verify that the script runs correctly and that the output displays as you expect it to.
+
+~ $ python3.6 list_tuple_dictionary.py                       
+['apple', 'banana', 'cherry']                                
+<class 'list'>                                               
+apple                                                        
+banana                                                       
+cherry                                                       
+['apple', 'banana', 'orange']                                
+~ $                                                          
+Exercise 2: The Tuple Data Type
+Define a Tuple
+The tuple is like a list, but it cannot be changed. A data type that cannot be changed after creation is called immutable. To define a tuple, you use parentheses instead of brackets. Let’s continue the Python script:
+
+Type the following to create a tuple:
+
+myFinalAnswerTuple = ("apple", "banana", "pineapple")
+print(myFinalAnswerTuple)
+print(type(myFinalAnswerTuple))
+Save the file.
+
+To run the program, type the following at the terminal:
+
+python3.6 list_tuple_dictionary.py
+Verify that the script runs correctly and that the output displays as you expect it to.
+
+Access a Tuple by Position
+Like a list, the items of a tuple can also be accessed by position:
+
+To access the "apple" string, type the following:
+
+print(myFinalAnswerTuple[0])
+To access the "banana" string, type the following:
+
+print(myFinalAnswerTuple[1])
+To access the "pineapple" string, type the following:
+
+print(myFinalAnswerTuple[2])
+Save the file.
+
+To run the program, type the following at the terminal:
+
+python3.6 list_tuple_dictionary.py
+Verify that the script runs correctly and that the output displays as you expect it to.
+
+~ $ python3.6 list_tuple_dictionary.py                       
+['apple', 'banana', 'cherry']                                
+<class 'list'>                                               
+apple                                                        
+banana                                                       
+cherry                                                       
+['apple', 'banana', 'orange']                                
+('apple', 'banana', 'pineapple')                             
+<class 'tuple'>                                              
+apple                                                        
+banana                                                       
+pineapple                                                    
+~ $
+Exercise 3: The Dictionary Data Type
+Define a Dictionary
+A dictionary is a list with named positions (keys). Imagine your list shows people’s favorite fruit.
+
+Return to the Python script, and type the following:
+
+myFavoriteFruitDictionary = {
+  "Adam" : "apple",
+  "Ben" : "banana",
+  "Penny" : "pineapple"
+}
+Use the print() function to write the dictionary to the shell:
+
+print(myFavoriteFruitDictionary)
+Use the type() function to write the data type to the shell:
+
+print(type(myFavoriteFruitDictionary))
+Save the file.
+
+To run the program, type the following at the terminal:
+
+python3.6 list_tuple_dictionary.py
+Access a Dictionary by Name
+Instead of using numbers, you will use the name of the individuals to get their favorite fruit.
+
+To access Adam’s favorite fruit, type the following:
+
+print(myFavoriteFruitDictionary["Adam"])
+To access Ben’s favorite fruit, type the following:
+
+print(myFavoriteFruitDictionary["Ben"])
+To access Penny’s favorite fruit, type the following:
+
+print(myFavoriteFruitDictionary["Penny"])
+Save the file.
+
+To run the program, type the following at the terminal:
+
+python3.6 list_tuple_dictionary.py
+Verify that the script runs correctly and that the output displays as you expect it to.
+
+~ $ python3.6 list_tuple_dictionary.py                       
+['apple', 'banana', 'cherry']                                
+<class 'list'>                                               
+apple                                                        
+banana                                                       
+cherry                                                       
+['apple', 'banana', 'orange']                                
+('apple', 'banana', 'pineapple')                             
+<class 'tuple'>                                              
+apple                                                        
+banana                                                       
+pineapple                                                    
+{'Adam': 'apple', 'Ben': 'banana', 'Penny': 'pineapple'}     
+<class 'dict'>                                               
+apple                                                        
+banana                                                       
+pineapple                                                    
+~ $ 
+Congratulations! You can now use the list, tuple, and dictionary data types.
+
+STOP
+You have successfully completed this lab.

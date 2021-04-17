@@ -1,0 +1,129 @@
+Conditionals
+Lab overview
+A section of code that compares two pieces of information is called a conditional statement. We use conditionals to create different paths through the program. Using comparative operators, you will write a program that makes decisions.
+
+In this lab, you will:
+
+Use the if statement
+Use the else statement
+Use the elif statement
+Estimated Completion Time
+45 minutes
+
+Exercise 1: The if Statement
+You will edit a Python script to ship packages:
+
+Click on the work folder in the file tree
+
+Click on the file conditionals.py that has been created for you:
+
+Use the input() function to get information from the user:
+
+userReply = input("Do you need to ship a package? (Type yes or no) ")
+Use the if statement to print a response. Note, the statements in an if statement are one tab indented from the if statement. In other programming languages, brackets are often used to indicate the start and end of a logic block, but Python uses spacing:
+
+if userReply == "yes":
+  print("We can help you ship that package!")
+Note
+
+The == symbol is a comparative operator; it means "is equal to".
+
+Save the file.
+
+To run the program, type the following at the terminal:
+
+python3.6 conditionals.py
+At the prompt, type yes and press ENTER.
+
+Verify you see a response.
+
+To run the program again, type the following at the terminal:
+
+python3.6 conditionals.py
+At the prompt, type no and press ENTER.
+
+Exercise 2: The else Statement
+To improve customer service, it would be nice to provide a reply even if the user does not want to ship a package. In this exercise, you will improve the Python Script by using the else statement:
+
+To handle the condition that the user does not want to ship a package, we use the else statement:
+
+else:
+  print("Please come back when you do need to  ship a package. Thank you.")
+Save the file.
+
+To run the program, type the following at the terminal:
+
+python3.6 conditionals.py
+At the prompt, type no and press ENTER.
+
+Verify you see a response.
+
+To run the program, type the following at the terminal:
+
+python3.6 conditionals.py
+At the prompt, type yes and press ENTER.
+
+Verify you see a response.
+
+Exercise 3: The elif statement
+In this exercise, you will improve the Python script by offering the user additional services. When you have multiple conditions, you can use the elif statement, which is short for "else-if". Note, the elif statement always comes after an if statement and before the else statement. Let’s return to the Python script:
+
+Type the following:
+
+userReply = input("Would you like to buy stamps, an envelope, or make a copy? (Type stamps, envelope, or copy)")
+if userReply == "stamps":
+    print("We have plenty of stamp designs to  choose from.")
+elif userReply == "envelope":
+    print("We have many envelope sizes to choose from.")
+elif userReply == "copy":
+    copies = input("How many copies would you like? (Type a number)")
+    print("Here are {} copies".format(copies))
+else:
+    print("Thank you, please come again.")
+Save the file.
+
+To run the program, type the following at the terminal:
+
+python3.6 conditionals.py
+At the prompt, type no and press ENTER.
+
+Verify you see a response.
+
+At the prompt, type stamps and press ENTER.
+
+Verify you see a response.
+
+You will run through the program a second time but go through a different path. Type the following at the terminal to run the program:
+
+python3.6 conditionals.py
+At the prompt, type yes and press ENTER.
+
+Verify you see a response.
+
+At the prompt, type envelope and press ENTER.
+
+Verify you see a response.
+
+You will run through the program a third time but go through a different path. Type the following at the terminal to run the program:
+
+python3.6 conditionals.py
+At the prompt, type no and press ENTER.
+
+Verify you see a response.
+
+At the prompt, type copy and press ENTER.
+
+Verify you see a response.
+
+At the prompt, type 2 and press ENTER.
+
+Verify you see a response.
+
+Note, the if, elfi, and else statements only allow one path to be executed at a time. The program doesn’t check the other statements once it finds a condition that is true.
+
+As you can see, each time through the program is slightly different. That is the power of conditionals.
+
+Congratulations, you have written a Python script that uses if, elif, and else statements.
+
+STOP
+You have successfully completed this lab.

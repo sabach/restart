@@ -1,0 +1,33 @@
+1.Print First 10 natural numbers using while loop:
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+2.Print the following pattern:
+1 
+1 2 
+1 2 3 
+1 2 3 4 
+1 2 3 4 5
+3.Accept number from user and calculate the sum of all number from 1 to a given number
+For example, if user entered 10 the output should be 55.
+4.Print multiplication table of a given number
+2
+4
+6
+8
+10
+12
+14
+16
+18
+20
+Collapse
+
